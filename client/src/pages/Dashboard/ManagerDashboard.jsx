@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
-import logo from '../assets/whitelogo.png';
-import sales from '../assets/sales.png';
-import costing from '../assets/costing.png';
-import project from '../assets/project.png';
-import engineering from '../assets/engineering.png';
-import procurement from '../assets/procurement.png';
-import setup from '../assets/setup.png';
-import store from '../assets/store.png';
-import timesheet from '../assets/timesheet.png';
-import report from '../assets/report.png';
-import logoutlogo from '../assets/logout.png';
+import logo from '../../assets/whitelogo.png';
+import sales from '../../assets/sales.png';
+import costing from '../../assets/costing.png';
+import project from '../../assets/project.png';
+import procurement from '../../assets/procurement.png';
+import setup from '../../assets/setup.png';
+import timesheet from '../../assets/timesheet.png';
+import report from '../../assets/report.png';
+import logoutlogo from '../../assets/logout.png';
 
-const Dashboard = () => {
+
+const ManagerDashboard = () => {
   const [isSalesDropdownOpen, setIsSalesDropdownOpen] = useState(false);
   const [isCostingDropdownOpen, setIsCostingDropdownOpen] = useState(false);
   const [isProjectDropdownOpen, setIsProjectDropdownOpen] = useState(false);
-  const [isEngineeringDropdownOpen, setIsEngineeringDropdownOpen] = useState(false);
   const [isProcurementDropdownOpen, setIsProcurementDropdownOpen] = useState(false);
   const [isSetupDropdownOpen, setIsSetupDropdownOpen] = useState(false);
-  const [isStoreDropdownOpen, setIsStoreDropdownOpen] = useState(false);
   const [isTimesheetDropdownOpen, setIsTimesheetDropdownOpen] = useState(false);
   const [isReportDropdownOpen, setIsReportDropdownOpen] = useState(false);
 
@@ -79,18 +76,7 @@ const Dashboard = () => {
               <button className='drp-btn'>Project Hours by PG</button>
             </div>
           )}
-          {/* Engineering dropdown */}
-          <button className='d-l-contents' onClick={() => setIsEngineeringDropdownOpen(!isEngineeringDropdownOpen)}>
-            <img src={engineering} width={21} alt='engineering' />
-            <p className='d-l-text'>Engineering</p>
-            <i className={`fa-solid fa-chevron-down ${isEngineeringDropdownOpen ? 'open' : ''}`}></i>
-          </button>
-          {isEngineeringDropdownOpen && (
-            <div className='dropdown-content'>
-              <button className='drp-btn'>Submittals</button>
-              <button className='drp-btn'>Cutting List</button>
-            </div>
-          )}
+          
 
           {/* Procurement dropdown */}
           <button className='d-l-contents' onClick={() => setIsProcurementDropdownOpen(!isProcurementDropdownOpen)}>
@@ -131,19 +117,7 @@ const Dashboard = () => {
               <button className='drp-btn'>Approval Deferral</button>
             </div>
           )}
-
-          {/* Store dropdown */}
-          <button className='d-l-contents' onClick={() => setIsStoreDropdownOpen(!isStoreDropdownOpen)}>
-            <img src={store} width={21} alt='store' />
-            <p className='d-l-text'>Store</p>
-            <i className={`fa-solid fa-chevron-down ${isStoreDropdownOpen ? 'open' : ''}`}></i>
-          </button>
-          {isStoreDropdownOpen && (
-            <div className='dropdown-content'>
-              <button className='drp-btn'>Inventory Maintenance</button>
-            </div>
-          )}
-
+          
           {/* Timesheet dropdown */}
           <button className='d-l-contents' onClick={() => setIsTimesheetDropdownOpen(!isTimesheetDropdownOpen)}>
             <img src={timesheet} width={21} alt='timesheet' />
@@ -189,6 +163,5 @@ const Dashboard = () => {
     </>
       );
     };
-    
-    export default Dashboard;
+export default ManagerDashboard;
     
