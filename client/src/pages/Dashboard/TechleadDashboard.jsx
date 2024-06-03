@@ -6,15 +6,12 @@ import procurement from '../../assets/procurement.png';
 import timesheet from '../../assets/timesheet.png';
 import report from '../../assets/report.png';
 import logoutlogo from '../../assets/logout.png';
-
-
 const TechleadDashboard = () => {
   const [isProjectDropdownOpen, setIsProjectDropdownOpen] = useState(false);
   const [isEngineeringDropdownOpen, setIsEngineeringDropdownOpen] = useState(false);
   const [isProcurementDropdownOpen, setIsProcurementDropdownOpen] = useState(false);
   const [isTimesheetDropdownOpen, setIsTimesheetDropdownOpen] = useState(false);
   const [isReportDropdownOpen, setIsReportDropdownOpen] = useState(false);
-
   return (
     <>
     {/* admin */}
@@ -23,8 +20,6 @@ const TechleadDashboard = () => {
       <div className='left-container'>
         <img src={logo} width={110} className='w-logo' alt='logo' />
         <div className='dashboard-list'>
-          
-
           {/* Project dropdown */}
           <button className='d-l-contents' onClick={() => setIsProjectDropdownOpen(!isProjectDropdownOpen)}>
             <img src={project} width={21} alt='project' />
